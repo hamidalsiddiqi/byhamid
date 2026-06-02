@@ -8,14 +8,20 @@
   --color-ink: #0b0b0d;
   --color-paper: #f4f3ef;
   --color-paper-2: #eceae3;
-  --color-accent: #c8a96a; /* warm gold, echoing the reference */
+  --color-accent: #c8a96a;
+  /* warm gold, echoing the reference */
   --color-muted: #6b6b6b;
 
   --animate-marquee: marquee 28s linear infinite;
 
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -28,16 +34,95 @@
   }
 }
 
-/* ── Reveal-on-scroll helper ─────────────────────────────── */
-@layer components {
-  .reveal {
+/* ── Scroll-driven animations (native CSS) ───────────────────
+   Uses animation-timeline: view() / scroll() — no JS, no observers.
+   Each element is driven by its own position in the viewport. */
+@keyframes reveal-in {
+  from {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(28px);
   }
-  .reveal.is-visible {
+
+  to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes parallax-drift {
+
+  /* element travels from +start to -end as it crosses the viewport;
+     the magnitude is set per-element via --parallax-shift */
+  from {
+    transform: translateY(var(--parallax-shift, 40px));
+  }
+
+  to {
+    transform: translateY(calc(var(--parallax-shift, 40px) * -1));
+  }
+}
+
+@keyframes progress-grow {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@layer components {
+
+  /* Scroll-progress bar pinned to the top of the viewport.
+     Driven by the document's own scroll progress (scroll(root)). */
+  .scroll-progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    background: var(--color-accent);
+    z-index: 60;
+    pointer-events: none;
+    animation: progress-grow linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+/* Only opt into scroll-timeline behaviour where it's supported.
+   Browsers without it just render content normally (no hidden state). */
+@supports (animation-timeline: view()) {
+  @layer components {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      /* play the entrance while the element rises through the bottom
+         40% of the viewport, finishing before it reaches the centre */
+      animation-range: entry 0% cover 35%;
+    }
+
+    [data-parallax] {
+      animation: parallax-drift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      will-change: transform;
+    }
+  }
+}
+
+/* ── Respect reduced-motion: disable all scroll-driven motion ── */
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal,
+  [data-parallax],
+  .scroll-progress {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .scroll-progress {
+    display: none;
   }
 }

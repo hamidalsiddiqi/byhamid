@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hamid Siddiqi — Self-Taught Programmer</title>
-  <meta name="description" content="Hamid Siddiqi — self-taught programmer building desktop, mobile and web applications." />
+  <title>Hamid Siddiqi */* Self-Taught Programmer</title>
+  <meta name="description"
+    content="Hamid Siddiqi — self-taught programmer building desktop, mobile and web applications." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Tailwind v4 — precompiled stylesheet (run `npm run build`) -->
   <link rel="stylesheet" href="./dist/output.css" />
@@ -17,8 +21,12 @@
 
 <body class="font-sans antialiased selection:bg-ink selection:text-paper">
 
+  <!-- ░░ Scroll progress bar ░░ -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <!-- ░░ Top announcement / marquee strip ░░ -->
-  <div class="w-full bg-ink text-paper/90 text-[11px] uppercase tracking-[0.25em] overflow-hidden border-b border-white/10">
+  <div
+    class="w-full bg-ink text-paper/90 text-[11px] uppercase tracking-[0.25em] overflow-hidden border-b border-white/10">
     <div class="flex whitespace-nowrap animate-marquee py-2">
       <div class="flex shrink-0">
         <span class="px-6">Desktop Apps</span><span class="px-6 text-accent">✦</span>
@@ -41,7 +49,9 @@
   <header class="sticky top-0 z-50 backdrop-blur-md bg-paper/70 border-b border-ink/10">
     <nav class="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between">
       <a href="#top" class="flex items-center gap-2 group">
-        <span class="grid place-items-center w-9 h-9 rounded-md bg-ink text-paper font-display font-bold text-lg leading-none group-hover:bg-accent group-hover:text-ink transition-colors">h<span class="text-accent group-hover:text-ink">.</span></span>
+        <span
+          class="grid place-items-center w-9 h-7 rounded-md bg-ink text-paper font-display font-bold text-lg leading-none group-hover:bg-accent group-hover:text-ink transition-colors"><span
+            class="relative top-0.5">h</span><span class="text-accent group-hover:text-ink">.</span></span>
         <span class="hidden sm:block font-display font-semibold tracking-tight">Hamid Siddiqi</span>
       </a>
 
@@ -55,12 +65,16 @@
 
       <div class="flex items-center gap-3">
         <a href="./CV.pdf" download
-           class="hidden sm:inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-ink/15 hover:border-ink/40 transition-colors">
+          class="hidden sm:inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-ink/15 hover:border-ink/40 transition-colors">
           Resume
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 21h14"/></svg>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
+            <path d="M5 21h14" />
+          </svg>
         </a>
         <a href="#contact"
-           class="inline-flex items-center text-sm font-medium px-4 py-2 rounded-full bg-ink text-paper hover:bg-accent hover:text-ink transition-colors">
+          class="inline-flex items-center text-sm font-medium px-4 py-2 rounded-full bg-ink text-paper hover:bg-accent hover:text-ink transition-colors">
           Get in touch
         </a>
       </div>
@@ -78,11 +92,11 @@
       </div>
 
       <div class="flex items-center justify-center gap-4 sm:gap-8 reveal">
-        <h1 class="font-display font-bold tracking-tighter leading-[0.85] text-[18vw] sm:text-[15vw] lg:text-[12rem] text-center">
+        <h1 data-parallax style="--parallax-shift: -36px"
+          class="font-display font-bold tracking-tighter leading-[0.85] text-[18vw] sm:text-[15vw] lg:text-[12rem] text-center">
           HAMID
         </h1>
-        <img src="./photo.png" alt="Hamid Siddiqi"
-             class="w-24 h-24 sm:w-36 sm:h-36 lg:w-48 lg:h-48 rounded-full object-cover shrink-0" />
+        <div id="heroPlaceholder" class="w-24 h-24 sm:w-36 sm:h-36 lg:w-48 lg:h-48 shrink-0"></div>
       </div>
 
       <div class="flex items-center justify-center gap-4 mt-2 reveal">
@@ -97,10 +111,13 @@
       <!-- Hero card -->
       <div class="mt-14 reveal">
         <div class="relative rounded-3xl overflow-hidden bg-ink text-paper p-8 md:p-14">
-          <div class="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_20%_20%,white_0,transparent_40%),radial-gradient(circle_at_80%_70%,white_0,transparent_40%)]"></div>
+          <div data-parallax style="--parallax-shift: -28px"
+            class="absolute inset-0 scale-125 opacity-[0.07] bg-[radial-gradient(circle_at_20%_20%,white_0,transparent_40%),radial-gradient(circle_at_80%_70%,white_0,transparent_40%)]">
+          </div>
           <div class="relative grid lg:grid-cols-[1.4fr_1fr] gap-10 items-end">
             <p class="text-2xl md:text-4xl font-display font-medium leading-snug max-w-2xl">
-              Turning <span class="text-accent">late-night curiosity</span> into software that actually ships — across desktop, mobile and the web.
+              Turning <span class="text-accent">late-night curiosity</span> into software that actually ships — across
+              desktop, mobile and the web.
             </p>
             <div class="flex flex-col gap-6">
               <div class="grid grid-cols-3 gap-4">
@@ -117,9 +134,13 @@
                   <div class="text-xs uppercase tracking-widest text-paper/60 mt-1">Side projects</div>
                 </div>
               </div>
-              <a href="#work" class="inline-flex items-center gap-2 text-sm font-medium text-paper/80 hover:text-accent transition-colors">
+              <a href="#work"
+                class="inline-flex items-center gap-2 text-sm font-medium text-paper/80 hover:text-accent transition-colors">
                 Explore the work
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14m0 0-6-6m6 6-6 6" />
+                </svg>
               </a>
             </div>
           </div>
@@ -129,21 +150,31 @@
 
     <!-- ░░ About ░░ -->
     <section id="about" class="mx-auto max-w-7xl px-6 lg:px-10 py-24 md:py-32">
-      <div class="grid lg:grid-cols-12 gap-10">
-        <div class="lg:col-span-4 reveal">
-          <span class="text-xs uppercase tracking-[0.25em] text-muted">(01) — About</span>
-          <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mt-4">
-            Not the traditional route.
-          </h2>
+      <div class="flex flex-col md:flex-row gap-10 lg:gap-16 items-start">
+        <div id="aboutPlaceholder"
+          class="w-24 h-24 sm:w-36 sm:h-36 lg:w-48 lg:h-48 shrink-0 pointer-events-none relative rounded-full">
         </div>
-        <div class="lg:col-span-7 lg:col-start-6 reveal">
-          <p class="text-xl md:text-2xl leading-relaxed text-ink/80">
-            I didn't take the traditional route. After discovering coding three years ago, I fell in love with the logic and creativity of software development. Through countless late nights and side projects, I taught myself how to build things that work.
-          </p>
-          <p class="text-lg leading-relaxed text-muted mt-6">
-            Today, I'm a programmer who proves that passion and persistence matter just as much as a degree.
-          </p>
+        <div class="grid lg:grid-cols-12 gap-10 flex-1">
+          <div class="lg:col-span-4 reveal">
+            <span class="text-xs uppercase tracking-[0.25em] text-muted">(01) — About</span>
+            <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mt-4">
+              Not the traditional route.
+            </h2>
+          </div>
+          <div class="lg:col-span-7 lg:col-start-6 reveal">
+            <p class="text-xl md:text-2xl leading-relaxed text-ink/80">
+              I didn't take the traditional route. After discovering coding three years ago, I fell in love with the
+              logic
+              and creativity of software development. Through countless late nights and side projects, I taught myself
+              how
+              to build things that work.
+            </p>
+            <p class="text-lg leading-relaxed text-muted mt-6">
+              Today, I'm a programmer who proves that passion and persistence matter just as much as a degree.
+            </p>
+          </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -163,28 +194,43 @@
           <div class="group bg-ink p-8 md:p-10 hover:bg-white/5 transition-colors reveal">
             <div class="flex items-center justify-between">
               <span class="font-display text-sm text-accent">01</span>
-              <svg class="w-7 h-7 text-paper/40 group-hover:text-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+              <svg class="w-7 h-7 text-paper/40 group-hover:text-accent transition-colors" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8m-4-4v4" />
+              </svg>
             </div>
             <h3 class="font-display text-2xl font-semibold mt-12">Desktop Apps</h3>
-            <p class="text-paper/60 mt-3 leading-relaxed">Native-feeling tools and utilities built to run fast and reliably on the machines people use every day.</p>
+            <p class="text-paper/60 mt-3 leading-relaxed">Native-feeling tools and utilities built to run fast and
+              reliably on the machines people use every day.</p>
           </div>
           <!-- Mobile -->
           <div class="group bg-ink p-8 md:p-10 hover:bg-white/5 transition-colors reveal">
             <div class="flex items-center justify-between">
               <span class="font-display text-sm text-accent">02</span>
-              <svg class="w-7 h-7 text-paper/40 group-hover:text-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+              <svg class="w-7 h-7 text-paper/40 group-hover:text-accent transition-colors" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="2" width="12" height="20" rx="2" />
+                <path d="M11 18h2" />
+              </svg>
             </div>
             <h3 class="font-display text-2xl font-semibold mt-12">Mobile Apps</h3>
-            <p class="text-paper/60 mt-3 leading-relaxed">Pocket-sized experiences that feel intuitive — from first tap to the features people keep coming back for.</p>
+            <p class="text-paper/60 mt-3 leading-relaxed">Pocket-sized experiences that feel intuitive — from first tap
+              to the features people keep coming back for.</p>
           </div>
           <!-- Web -->
           <div class="group bg-ink p-8 md:p-10 hover:bg-white/5 transition-colors reveal">
             <div class="flex items-center justify-between">
               <span class="font-display text-sm text-accent">03</span>
-              <svg class="w-7 h-7 text-paper/40 group-hover:text-accent transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+              <svg class="w-7 h-7 text-paper/40 group-hover:text-accent transition-colors" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
+              </svg>
             </div>
             <h3 class="font-display text-2xl font-semibold mt-12">Web Apps</h3>
-            <p class="text-paper/60 mt-3 leading-relaxed">Modern, responsive web applications — the kind of side projects that taught me everything I know.</p>
+            <p class="text-paper/60 mt-3 leading-relaxed">Modern, responsive web applications — the kind of side
+              projects that taught me everything I know.</p>
           </div>
         </div>
       </div>
@@ -207,86 +253,230 @@
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div class="flex items-baseline gap-6">
                 <span class="font-display text-sm text-paper/40">P—01</span>
-                <h3 class="font-display text-3xl md:text-5xl font-semibold tracking-tight group-hover:text-accent transition-colors">Project Alpha</h3>
+                <h3
+                  class="font-display text-3xl md:text-5xl font-semibold tracking-tight group-hover:text-accent transition-colors">
+                  Project Alpha</h3>
               </div>
               <div class="flex items-center gap-6 pl-12 md:pl-0">
                 <span class="text-sm text-paper/50">Desktop · 2025</span>
-                <span class="grid place-items-center w-10 h-10 rounded-full border border-white/15 group-hover:bg-accent group-hover:text-ink group-hover:border-accent transition-all">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+                <span
+                  class="grid place-items-center w-10 h-10 rounded-full border border-white/15 group-hover:bg-accent group-hover:text-ink group-hover:border-accent transition-all">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17 17 7M7 7h10v10" />
+                  </svg>
                 </span>
               </div>
             </div>
-            <p class="text-paper/50 mt-3 pl-12 md:pl-[3.75rem] max-w-xl">Placeholder description — replace with your real project details, stack and outcome.</p>
+            <p class="text-paper/50 mt-3 pl-12 md:pl-[3.75rem] max-w-xl">Placeholder description — replace with your
+              real project details, stack and outcome.</p>
           </a>
 
           <a href="#" class="group block border-t border-white/10 py-8 reveal">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div class="flex items-baseline gap-6">
                 <span class="font-display text-sm text-paper/40">P—02</span>
-                <h3 class="font-display text-3xl md:text-5xl font-semibold tracking-tight group-hover:text-accent transition-colors">Project Beta</h3>
+                <h3
+                  class="font-display text-3xl md:text-5xl font-semibold tracking-tight group-hover:text-accent transition-colors">
+                  Project Beta</h3>
               </div>
               <div class="flex items-center gap-6 pl-12 md:pl-0">
                 <span class="text-sm text-paper/50">Mobile · 2025</span>
-                <span class="grid place-items-center w-10 h-10 rounded-full border border-white/15 group-hover:bg-accent group-hover:text-ink group-hover:border-accent transition-all">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+                <span
+                  class="grid place-items-center w-10 h-10 rounded-full border border-white/15 group-hover:bg-accent group-hover:text-ink group-hover:border-accent transition-all">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17 17 7M7 7h10v10" />
+                  </svg>
                 </span>
               </div>
             </div>
-            <p class="text-paper/50 mt-3 pl-12 md:pl-[3.75rem] max-w-xl">Placeholder description — replace with your real project details, stack and outcome.</p>
+            <p class="text-paper/50 mt-3 pl-12 md:pl-[3.75rem] max-w-xl">Placeholder description — replace with your
+              real project details, stack and outcome.</p>
           </a>
 
           <a href="#" class="group block border-t border-b border-white/10 py-8 reveal">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div class="flex items-baseline gap-6">
                 <span class="font-display text-sm text-paper/40">P—03</span>
-                <h3 class="font-display text-3xl md:text-5xl font-semibold tracking-tight group-hover:text-accent transition-colors">Project Gamma</h3>
+                <h3
+                  class="font-display text-3xl md:text-5xl font-semibold tracking-tight group-hover:text-accent transition-colors">
+                  Project Gamma</h3>
               </div>
               <div class="flex items-center gap-6 pl-12 md:pl-0">
                 <span class="text-sm text-paper/50">Web · 2026</span>
-                <span class="grid place-items-center w-10 h-10 rounded-full border border-white/15 group-hover:bg-accent group-hover:text-ink group-hover:border-accent transition-all">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+                <span
+                  class="grid place-items-center w-10 h-10 rounded-full border border-white/15 group-hover:bg-accent group-hover:text-ink group-hover:border-accent transition-all">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17 17 7M7 7h10v10" />
+                  </svg>
                 </span>
               </div>
             </div>
-            <p class="text-paper/50 mt-3 pl-12 md:pl-[3.75rem] max-w-xl">Placeholder description — replace with your real project details, stack and outcome.</p>
+            <p class="text-paper/50 mt-3 pl-12 md:pl-[3.75rem] max-w-xl">Placeholder description — replace with your
+              real project details, stack and outcome.</p>
           </a>
         </div>
       </div>
     </section>
 
     <!-- ░░ Testimonials ░░ -->
-    <section id="testimonials" class="bg-paper-2 rounded-t-[2.5rem] -mt-6 relative z-10">
-      <div class="mx-auto max-w-7xl px-6 lg:px-10 py-24 md:py-32">
+    <section id="testimonials" class="bg-paper-2 rounded-t-[2.5rem] -mt-6 relative z-10 min-h-screen flex flex-col justify-center">
+      <div class="mx-auto w-full max-w-7xl px-6 lg:px-10 py-24 md:py-32">
         <div class="mb-16 reveal">
           <span class="text-xs uppercase tracking-[0.25em] text-muted">(04) — Kind words</span>
           <h2 class="font-display text-4xl md:text-6xl font-bold tracking-tight mt-4 max-w-2xl">What people say</h2>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-          <figure class="bg-paper rounded-2xl p-8 border border-ink/5 reveal">
-            <div class="text-accent text-4xl font-display leading-none">"</div>
-            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Placeholder testimonial — add a real quote here later. Hamid is dependable and ships fast.</blockquote>
+        <!-- Stacking cards: pinned while scrolling, each card slides up and stacks on the previous -->
+        <div id="testimonialStack" class="stack-cards">
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Hamid was very responsive and transparent. Did
+              great work!</blockquote>
             <figcaption class="flex items-center gap-3 mt-8">
-              <span class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">A</span>
-              <span><span class="block font-medium text-sm">Client Name</span><span class="block text-xs text-muted">Role · Company</span></span>
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">N</span>
+              <span><span class="block font-medium text-sm">nickcarlon</span><span
+                  class="block text-xs text-muted">United States 🇺🇸</span></span>
             </figcaption>
           </figure>
 
-          <figure class="bg-paper rounded-2xl p-8 border border-ink/5 reveal">
-            <div class="text-accent text-4xl font-display leading-none">"</div>
-            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Placeholder testimonial — add a real quote here later. A self-taught talent worth watching.</blockquote>
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Thanks for understanding the bugs and fixing
+              with no time.</blockquote>
             <figcaption class="flex items-center gap-3 mt-8">
-              <span class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">B</span>
-              <span><span class="block font-medium text-sm">Client Name</span><span class="block text-xs text-muted">Role · Company</span></span>
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">S</span>
+              <span><span class="block font-medium text-sm">sarahom</span><span class="block text-xs text-muted">Saudi
+                  Arabia 🇸🇦</span></span>
             </figcaption>
           </figure>
 
-          <figure class="bg-paper rounded-2xl p-8 border border-ink/5 reveal">
-            <div class="text-accent text-4xl font-display leading-none">"</div>
-            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Placeholder testimonial — add a real quote here later. Great communication and clean code.</blockquote>
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Great work as usual.</blockquote>
             <figcaption class="flex items-center gap-3 mt-8">
-              <span class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">C</span>
-              <span><span class="block font-medium text-sm">Client Name</span><span class="block text-xs text-muted">Role · Company</span></span>
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">W</span>
+              <span><span class="block font-medium text-sm">wt6746</span><span class="block text-xs text-muted">United
+                  States 🇺🇸</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Did a great job. Responded quickly and
+              understood the tasks.</blockquote>
+            <figcaption class="flex items-center gap-3 mt-8">
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">W</span>
+              <span><span class="block font-medium text-sm">wt6746</span><span class="block text-xs text-muted">United
+                  States 🇺🇸</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">This guy is the best on Fiverr — highest
+              recommend from me again.</blockquote>
+            <figcaption class="flex items-center gap-3 mt-8">
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">P</span>
+              <span><span class="block font-medium text-sm">processdrivened</span><span
+                  class="block text-xs text-muted">United Kingdom 🇬🇧</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Delivered on requests 5 days ahead of schedule.
+            </blockquote>
+            <figcaption class="flex items-center gap-3 mt-8">
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">P</span>
+              <span><span class="block font-medium text-sm">philipshank</span><span
+                  class="block text-xs text-muted">Vietnam 🇻🇳</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Understood the brief. Is very technically
+              capable and was flexible with his delivery.</blockquote>
+            <figcaption class="flex items-center gap-3 mt-8">
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">A</span>
+              <span><span class="block font-medium text-sm">alirulez</span><span class="block text-xs text-muted">United
+                  Kingdom 🇬🇧</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Exceptional work done by Hamid, he is good with
+              his work and would definitely hire him for the next project too. Keep it up.</blockquote>
+            <figcaption class="flex items-center gap-3 mt-8">
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">R</span>
+              <span><span class="block font-medium text-sm">ronaksawhney</span><span
+                  class="block text-xs text-muted">India 🇮🇳</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">From the initial conversation there was a clear
+              understanding of my needs, delivery was set for three days and completed in one. I value the understanding
+              of different time zones as he was patient on getting feedback. App works great!</blockquote>
+            <figcaption class="flex items-center gap-3 mt-8">
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">M</span>
+              <span><span class="block font-medium text-sm">mexico99</span><span class="block text-xs text-muted">United
+                  States 🇺🇸</span></span>
+            </figcaption>
+          </figure>
+
+          <figure class="stack-card bg-paper rounded-2xl p-8 border border-ink/5">
+            <div class="flex items-center justify-between">
+              <div class="text-accent text-4xl font-display leading-none">"</div>
+              <div class="text-accent text-sm tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+            <blockquote class="text-lg leading-relaxed text-ink/80 mt-2">Great work.</blockquote>
+            <figcaption class="flex items-center gap-3 mt-8">
+              <span
+                class="w-10 h-10 rounded-full bg-ink/10 grid place-items-center font-display font-semibold text-sm">F</span>
+              <span><span class="block font-medium text-sm">faizanm332</span><span
+                  class="block text-xs text-muted">United States 🇺🇸</span></span>
             </figcaption>
           </figure>
         </div>
@@ -298,12 +488,15 @@
       <div class="text-center reveal">
         <span class="text-xs uppercase tracking-[0.25em] text-muted">(05) — Let's talk</span>
         <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter mt-6 leading-[0.9]">
-          Have an idea?<br/><span class="text-accent">Let's build it.</span>
+          Have an idea?<br /><span class="text-accent">Let's build it.</span>
         </h2>
         <a href="mailto:hamidsiddiqi888@gmail.com"
-           class="inline-flex items-center gap-3 mt-10 text-lg md:text-xl font-medium px-8 py-4 rounded-full bg-ink text-paper hover:bg-accent hover:text-ink transition-colors">
+          class="inline-flex items-center gap-3 mt-10 text-lg md:text-xl font-medium px-8 py-4 rounded-full bg-ink text-paper hover:bg-accent hover:text-ink transition-colors">
           hamidsiddiqi888@gmail.com
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14m0 0-6-6m6 6-6 6" />
+          </svg>
         </a>
 
         <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-10 text-sm text-muted">
@@ -319,7 +512,8 @@
 
   <!-- ░░ Footer ░░ -->
   <footer class="border-t border-ink/10">
-    <div class="mx-auto max-w-7xl px-6 lg:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+    <div
+      class="mx-auto max-w-7xl px-6 lg:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
       <span>© 2026 Hamid Siddiqi. Self-taught & still learning.</span>
       <div class="flex items-center gap-6">
         <a href="mailto:hamidsiddiqi888@gmail.com" class="hover:text-ink transition-colors">Email</a>
@@ -329,17 +523,245 @@
     </div>
   </footer>
 
-  <!-- ░░ Reveal-on-scroll ░░ -->
+  <!-- Scroll animations are 100% native CSS, but morph image relies on GSAP -->
+
+  <div id="morphObj" class="absolute -z-10 pointer-events-none overflow-hidden"
+    style="will-change: left, top, transform, width, height, border-radius; transition: filter 0.2s ease;">
+    <div class="relative w-full h-full">
+      <img id="imgFirst" src="./photo.png" alt="Hamid" class="absolute inset-0 w-full h-full object-cover"
+        style="opacity: 1;" />
+      <img id="imgSecond" src="./about.png" alt="About" class="absolute inset-0 w-full h-full object-cover -scale-x-100"
+        style="opacity: 0;" />
+    </div>
+  </div>
+
+  <style>
+    /* ── Stacking testimonial cards ──────────────────────────────
+       All cards share one grid cell so they overlap; GSAP drives the
+       y / scale of each on scroll to produce the stacking effect. */
+    .stack-cards {
+      display: grid;
+      place-items: center;
+      min-height: 60vh;
+    }
+
+    .stack-cards>.stack-card {
+      grid-area: 1 / 1;
+      width: 100%;
+      max-width: 30rem;
+      will-change: transform;
+      backface-visibility: hidden;
+      box-shadow: 0 24px 48px -24px rgba(20, 20, 20, 0.25);
+    }
+
+    /* No scroll-timeline support / reduced motion: fall back to a
+       normal responsive grid so every card stays readable. */
+    @media (prefers-reduced-motion: reduce) {
+      .stack-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 1.5rem;
+        place-items: stretch;
+        min-height: 0;
+      }
+
+      .stack-cards>.stack-card {
+        grid-area: auto;
+        max-width: none;
+        transform: none !important;
+        box-shadow: none;
+      }
+    }
+
+    .glow-transition {
+      animation: softGlow 0.6s ease-out;
+    }
+
+    @keyframes softGlow {
+      0% {
+        filter: drop-shadow(0 0 0px rgba(200, 169, 106, 0));
+      }
+
+      50% {
+        filter: drop-shadow(0 0 16px rgba(200, 169, 106, 0.5));
+      }
+
+      100% {
+        filter: drop-shadow(0 0 0px rgba(200, 169, 106, 0));
+      }
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-visible');
-          io.unobserve(e.target);
+    gsap.registerPlugin(ScrollTrigger);
+
+    const morphObj = document.getElementById('morphObj');
+    const imgFirst = document.getElementById('imgFirst');
+    const imgSecond = document.getElementById('imgSecond');
+    const heroPlaceholder = document.getElementById('heroPlaceholder');
+    const aboutPlaceholder = document.getElementById('aboutPlaceholder');
+
+    let morphTimeline;
+
+    function getDocRelPos(el) {
+      const rect = el.getBoundingClientRect();
+      return {
+        left: rect.left + window.scrollX,
+        top: rect.top + window.scrollY,
+        width: rect.width,
+        height: rect.height
+      };
+    }
+
+    function initMorph() {
+      if (morphTimeline) {
+        morphTimeline.kill();
+      }
+
+      const startPos = getDocRelPos(heroPlaceholder);
+
+      gsap.set(morphObj, {
+        left: startPos.left,
+        top: startPos.top,
+        width: startPos.width,
+        height: startPos.height,
+        borderRadius: "9999px",
+        rotate: 0,
+        scale: 1
+      });
+
+      morphTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: "main",
+          start: "top top",
+          endTrigger: "#about",
+          end: "center center",
+          scrub: 1.2,
+          invalidateOnRefresh: true,
+          onUpdate: (self) => {
+            const progress = self.progress;
+
+            let img1Opacity = 1;
+            let img2Opacity = 0;
+            if (progress <= 0.5) {
+              img1Opacity = 1;
+              img2Opacity = 0;
+            } else {
+              const t = (progress - 0.5) / 0.5;
+              const easeT = Math.sin(t * Math.PI / 2);
+              img1Opacity = 1 - easeT;
+              img2Opacity = easeT;
+            }
+            imgFirst.style.opacity = img1Opacity;
+            imgSecond.style.opacity = img2Opacity;
+
+            if (progress > 0.45 && progress < 0.65) {
+              if (!morphObj.classList.contains('glow-transition')) {
+                morphObj.classList.add('glow-transition');
+              }
+            } else {
+              if (morphObj.classList.contains('glow-transition')) {
+                morphObj.classList.remove('glow-transition');
+              }
+            }
+          }
         }
       });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+      morphTimeline.to(morphObj, {
+        left: () => getDocRelPos(aboutPlaceholder).left,
+        top: () => getDocRelPos(aboutPlaceholder).top,
+        width: () => getDocRelPos(aboutPlaceholder).width,
+        height: () => getDocRelPos(aboutPlaceholder).height,
+        ease: "power2.inOut",
+        duration: 1
+      }, 0);
+
+      morphTimeline.to(morphObj, { scale: 1.15, ease: "sine.inOut", duration: 0.5 }, 0);
+      morphTimeline.to(morphObj, { scale: 1, ease: "sine.inOut", duration: 0.5 }, 0.5);
+
+      morphTimeline.to(morphObj, { rotate: 6, ease: "power1.inOut", duration: 0.5 }, 0);
+      morphTimeline.to(morphObj, { rotate: -2, ease: "power1.inOut", duration: 0.5 }, 0.5);
+      morphTimeline.to(morphObj, { rotate: 0, ease: "back.out(0.6)", duration: 0.3 }, 0.8);
+    }
+
+    window.addEventListener('load', () => { setTimeout(initMorph, 50); });
+    window.addEventListener('resize', () => {
+      ScrollTrigger.refresh();
+      setTimeout(initMorph, 50);
+    });
+
+    /* ── Stacking testimonial cards ─────────────────────────────
+       Pin the section and, as the user scrolls, slide each card up
+       into a stack. The card already on top scales down + dims so the
+       pile reads as depth. Respects prefers-reduced-motion (the CSS
+       fallback turns the stack back into a plain responsive grid). */
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let stackTimeline;
+
+    function initStack() {
+      if (prefersReducedMotion) return;
+
+      const stack = document.getElementById('testimonialStack');
+      if (!stack) return;
+
+      const cards = gsap.utils.toArray('#testimonialStack > .stack-card');
+      if (!cards.length) return;
+
+      if (stackTimeline) {
+        stackTimeline.scrollTrigger && stackTimeline.scrollTrigger.kill();
+        stackTimeline.kill();
+      }
+
+      // Start state: the first card sits on top, every other card waits
+      // just below the viewport, slightly offset so they peek as a deck.
+      gsap.set(cards, {
+        yPercent: (i) => (i === 0 ? 0 : 120),
+        scale: 1,
+        rotate: 0,
+        transformOrigin: 'center top'
+      });
+
+      const step = 1;            // each card transition spans one unit of the timeline
+      const settle = 0.18;       // how much earlier the under-card starts settling
+
+      stackTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#testimonials',
+          start: 'top top',
+          // give the pin enough scroll distance for every card transition
+          end: () => '+=' + (cards.length * window.innerHeight * 0.6),
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+          anticipatePin: 1
+        }
+      });
+
+      cards.forEach((card, i) => {
+        if (i === 0) return;
+        const at = (i - 1) * step;
+        const prev = cards[i - 1];
+
+        // incoming card rises into place
+        stackTimeline.to(card, { yPercent: 0, ease: 'power2.out', duration: step }, at);
+
+        // the card it lands on tucks back: shrink, dim a touch, nudge up
+        stackTimeline.to(prev, {
+          scale: 0.92,
+          yPercent: -6 - i * 1.5,
+          opacity: 0.85,
+          ease: 'power2.inOut',
+          duration: step
+        }, at - settle);
+      });
+    }
+
+    window.addEventListener('load', () => { setTimeout(initStack, 60); });
+    window.addEventListener('resize', () => { setTimeout(initStack, 60); });
   </script>
 </body>
+
 </html>
