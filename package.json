@@ -1,0 +1,14 @@
+{
+  "name": "hamid-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Hamid Siddiqi",
+  "private": true,
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* ── Design tokens ───────────────────────────────────────── */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+
+  --color-ink: #0b0b0d;
+  --color-paper: #f4f3ef;
+  --color-paper-2: #eceae3;
+  --color-accent: #c8a96a; /* warm gold, echoing the reference */
+  --color-muted: #6b6b6b;
+
+  --animate-marquee: marquee 28s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+@layer base {
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ── Reveal-on-scroll helper ─────────────────────────────── */
+@layer components {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
