@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamid — Software Developer</title>
+  <meta name="description" content="Hamid — Software Developer. Portfolio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">~/hamid</a>
+    <nav class="nav">
+      <a href="mailto:hello@byhamid.xyz">email</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">github</a>
+      <a href="https://x.com/" target="_blank" rel="noopener">x</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <p class="prompt">$ whoami</p>
+        <h1 class="name"><span class="name-first" data-text="Hamid"></span><br /><span class="name-last" data-text="Siddiqi"></span><span class="name-dot">.</span></h1>
+        <p class="role">Software Developer</p>
+        <p class="tagline">
+          I build clean, functional software.<br />
+          Turning ideas into things that ship.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn">get in touch</a>
+          <a href="#skills" class="btn btn-ghost">view skills</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="hero.gif" alt="Hero animation" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <h2><p class="prompt">$ cat about.txt</p> about</h2>
+      <div class="section-body">
+        <p>
+          Hi, I'm Hamid — a developer who enjoys building things for the web and
+          beyond. I care about writing code that's readable, maintainable, and
+          does exactly what it should.
+        </p>
+        <p>
+          Whether it's a small tool or a full product, I focus on the details
+          that make software feel solid: performance, clarity, and a good
+          experience for the people using it.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section-alt" id="skills">
+      <h2><p class="prompt">$ cat skills.txt</p> skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>languages</h3>
+          <ul>
+            <li>JavaScript / TypeScript</li>
+            <li>Python</li>
+            <li>HTML &amp; CSS</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>frameworks</h3>
+          <ul>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Next.js</li>
+            <li>Express</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>tools</h3>
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>Docker</li>
+            <li>Linux</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>cybersecurity</h3>
+          <ul>
+            <li>Penetration Testing</li>
+            <li>Network Security</li>
+            <li>Burp Suite / Nmap</li>
+            <li>OWASP Top 10</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects / Case studies -->
+    <section class="section" id="projects">
+      <h2><p class="prompt">$ ls case-studies/</p> case studies</h2>
+      <p class="section-lead">
+        A consistent approach across every build — ship fast, keep it secure,
+        and solve the real problem end to end.
+      </p>
+
+      <div class="cases-grid">
+        <a class="case-card" href="#" target="_blank" rel="noopener">
+          <img class="case-media" data-label="01" src="case1.jpg" alt="Case study 1" />
+          <div class="case-body">
+            <h3>Cutting checkout drop-off by 40% for an e-commerce platform</h3>
+            <p class="case-desc">
+              Rebuilt the payment flow end to end — faster loads, fewer steps,
+              cleaner error handling.
+            </p>
+            <ul class="case-tags">
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Stripe</li>
+            </ul>
+            <span class="case-link">view case study &rarr;</span>
+          </div>
+        </a>
+
+        <a class="case-card" href="#" target="_blank" rel="noopener">
+          <img class="case-media" data-label="02" src="case2.jpeg" alt="Case study 2" />
+          <div class="case-body">
+            <h3>Hardening a SaaS product against the OWASP Top 10</h3>
+            <p class="case-desc">
+              Led a full security audit and remediation — closed 30+
+              vulnerabilities and added automated scanning to CI.
+            </p>
+            <ul class="case-tags">
+              <li>Pen Testing</li>
+              <li>Burp Suite</li>
+              <li>CI/CD</li>
+            </ul>
+            <span class="case-link">view case study &rarr;</span>
+          </div>
+        </a>
+
+        <a class="case-card" href="#" target="_blank" rel="noopener">
+          <img class="case-media" data-label="02" src="case3.jpeg" alt="Case study 2" />
+          <div class="case-body">
+            <h3>Real-time dashboard handling 10k+ events per second</h3>
+            <p class="case-desc">
+              Designed the data pipeline and live UI for a high-throughput
+              monitoring tool used across teams.
+            </p>
+            <ul class="case-tags">
+              <li>Next.js</li>
+              <li>WebSockets</li>
+              <li>Postgres</li>
+            </ul>
+            <span class="case-link">view case study &rarr;</span>
+          </div>
+        </a>
+
+        <a class="case-card" href="#" target="_blank" rel="noopener">
+          <img class="case-media" data-label="02" src="case4.png" alt="Case study 2" />
+          <div class="case-body">
+            <h3>Automating deploys to cut release time from hours to minutes</h3>
+            <p class="case-desc">
+              Containerized the stack and built a CI/CD pipeline that made
+              shipping safe, repeatable, and fast.
+            </p>
+            <ul class="case-tags">
+              <li>Docker</li>
+              <li>GitHub Actions</li>
+              <li>AWS</li>
+            </ul>
+            <span class="case-link">view case study &rarr;</span>
+          </div>
+        </a>
+      </div>
+
+      <h3 class="cases-subhead"><span class="hash">#</span> earlier experience</h3>
+      <div class="cases-grid cases-grid-two">
+        <a class="case-card" href="#" target="_blank" rel="noopener">
+          <img class="case-media" data-label="02" src="case5.png" alt="Case study 2" />
+          <div class="case-body">
+            <h3>Freelance full-stack developer (2021&ndash;present)</h3>
+            <p class="case-desc">
+              Building web apps and tools for clients across industries, from
+              MVP to production.
+            </p>
+            <ul class="case-tags">
+              <li>Full-stack</li>
+              <li>Client work</li>
+              <li>Product</li>
+            </ul>
+            <span class="case-link">more &rarr;</span>
+          </div>
+        </a>
+
+        <a class="case-card" href="#" target="_blank" rel="noopener">
+          <div class="case-body"><img class="case-media" data-label="02" src="case6.png" alt="Case study 2" />
+            <h3>Self-taught developer &amp; security tinkerer (2019&ndash;2021)</h3>
+            <p class="case-desc">
+              Where it started — shipping side projects and diving deep into how
+              systems break and get secured.
+            </p>
+            <ul class="case-tags">
+              <li>Foundations</li>
+              <li>CTFs</li>
+              <li>Open source</li>
+            </ul>
+            <span class="case-link">more &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="section section-alt" id="capabilities">
+      <h2><p class="prompt">$ cat capabilities.txt</p> capabilities</h2>
+      <div class="capabilities-grid">
+        <div class="capability">
+          <span class="capability-icon">&lt;/&gt;</span>
+          <h3>frontend</h3>
+          <p>
+            Building responsive, accessible interfaces that feel fast and look
+            clean across devices.
+          </p>
+        </div>
+        <div class="capability">
+          <span class="capability-icon">{ }</span>
+          <h3>backend</h3>
+          <p>
+            Designing APIs, data models, and services that stay reliable as they
+            scale.
+          </p>
+        </div>
+        <div class="capability">
+          <span class="capability-icon">&#9881;</span>
+          <h3>tooling &amp; devops</h3>
+          <p>
+            Automating builds, deploys, and workflows so shipping stays smooth
+            and repeatable.
+          </p>
+        </div>
+        <div class="capability">
+          <span class="capability-icon">&#9670;</span>
+          <h3>product thinking</h3>
+          <p>
+            Translating fuzzy ideas into concrete features people actually want
+            to use.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where I Dominate -->
+    <section class="section" id="dominate">
+      <h2><p class="prompt">$ cat strengths.txt</p> where i dominate</h2>
+      <div class="dominate-grid">
+        <div class="dominate-item">
+          <span class="dominate-num">01</span>
+          <div>
+            <h3>shipping fast without breaking things</h3>
+            <p>
+              I move quickly but keep quality high — clean commits, tested paths,
+              and code that's easy to build on later.
+            </p>
+          </div>
+        </div>
+        <div class="dominate-item">
+          <span class="dominate-num">02</span>
+          <div>
+            <h3>turning complexity into simplicity</h3>
+            <p>
+              I take tangled requirements and reduce them to interfaces and
+              systems that just make sense.
+            </p>
+          </div>
+        </div>
+        <div class="dominate-item">
+          <span class="dominate-num">03</span>
+          <div>
+            <h3>full-stack ownership</h3>
+            <p>
+              From database to pixel, I can own a feature end to end and see it
+              all the way to production.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Still Evolving -->
+    <section class="section section-alt" id="evolving">
+      <h2><p class="prompt">$ cat learning.log</p> still evolving</h2>
+      <div class="section-body">
+        <p>
+          Growth never stops. These are the areas I'm actively leveling up in
+          right now.
+        </p>
+        <ul class="evolving-list">
+          <li>
+            <span class="evolving-tag">learning</span>
+            <span class="evolving-name">Rust</span>
+            <span class="evolving-note">for performance-critical tooling</span>
+          </li>
+          <li>
+            <span class="evolving-tag">exploring</span>
+            <span class="evolving-name">AI / LLM apps</span>
+            <span class="evolving-note">building with agents &amp; RAG</span>
+          </li>
+          <li>
+            <span class="evolving-tag">deepening</span>
+            <span class="evolving-name">System design</span>
+            <span class="evolving-note">scalable, resilient architectures</span>
+          </li>
+          <li>
+            <span class="evolving-tag">practicing</span>
+            <span class="evolving-name">Cloud / infra</span>
+            <span class="evolving-note">AWS &amp; infrastructure-as-code</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <h2><span class="hash">#</span> contact</h2>
+      <div class="section-body">
+        <p>Want to work together or just say hi? Reach out.</p>
+        <ul class="contact-list">
+          <li><span class="key">email</span><a href="mailto:hello@byhamid.xyz">hello@byhamid.xyz</a></li>
+          <li><span class="key">github</span><a href="https://github.com/hamidalsiddiqi" target="_blank" rel="noopener">github.com/hamidalsiddiqi</a></li>
+          <li><span class="key">x</span><a href="https://x.com/" target="_blank" rel="noopener">@hamidalsiddiqi</a></li>
+          <li><span class="key">linkedin</span><a href="https://www.linkedin.com/in/hamid-siddiqi-89a854340/" target="_blank" rel="noopener">in/hamid-siddiqi-89a854340/</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Hamid</span>
+    <span>built with monospace &amp; care</span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Split hero name into per-character spans (each hovers independently)
+    (function () {
+      var parts = document.querySelectorAll(".name [data-text]");
+      parts.forEach(function (part) {
+        var text = part.getAttribute("data-text");
+        part.textContent = "";
+        text.split("").forEach(function (ch) {
+          var span = document.createElement("span");
+          span.className = "char";
+          span.textContent = ch;
+          part.appendChild(span);
+        });
+      });
+    })();
+
+    // Scroll reveal animation
+    (function () {
+      var targets = document.querySelectorAll(
+        ".section h2, .section-body, .section-lead, .skill-group, .case-card, .capability, .dominate-item, .evolving-list li"
+      );
+
+      targets.forEach(function (el, i) {
+        el.classList.add("reveal");
+        // small stagger for grouped items
+        el.style.transitionDelay = (i % 4) * 80 + "ms";
+      });
+
+      if (!("IntersectionObserver" in window)) {
+        targets.forEach(function (el) {
+          el.classList.add("is-visible");
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      );
+
+      targets.forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>
