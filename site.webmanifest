@@ -1,0 +1,23 @@
+{
+  "name": "Hamid Al Siddiqi — Software Developer",
+  "short_name": "byhamid",
+  "description": "Portfolio of Hamid Al Siddiqi, software developer and security engineer.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fcfcfc",
+  "theme_color": "#fcfcfc",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
