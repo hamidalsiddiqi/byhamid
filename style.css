@@ -486,37 +486,24 @@ main {
   border-color: var(--fg);
 }
 
+img.case-media,
 .case-media {
-  position: relative;
   display: block;
   width: 100%;
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
   background: linear-gradient(135deg, #ededed 0%, #f6f6f6 100%);
   border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
 }
 
-.case-media::before {
-  content: attr(data-label);
-  position: absolute;
-  top: 14px;
-  left: 16px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--muted);
-}
-
+.case-media::before,
 .case-media::after {
-  content: "</>";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #cfcfcf;
+  content: none;
+  display: none !important;
 }
 
 .case-body {
